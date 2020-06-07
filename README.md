@@ -4,6 +4,8 @@
 
 ## Build Setup
 
+vue init webpack vueX
+
 ``` bash
 # install dependencies
 npm install
