@@ -5,6 +5,9 @@
         store:{{ count }}
         <br>
         moduleA: {{$store.state.moduleA.name}} ---{{name}} ----{{age}}
+<!--        {{$store.getters["moduleB/incr"]}}-->
+        {{$store.dispatch('moduleB/incr')}}
+<!--        {{$store.state["moduleA/age"]}}-->
         <br>
         moduleB:{{hero}}----{{sex}}
     </div>
@@ -22,7 +25,8 @@
             //映射模块B的state
             ...mapState('moduleA',['name','age']),
             ...mapState('moduleB',['hero','sex'])
-        }
+
+        },
     }
 </script>
 

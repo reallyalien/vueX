@@ -7,6 +7,7 @@
 
 
         <hr>
+        <p>子组件开始</p>
 
         <com-a></com-a>
         <hr>
@@ -17,6 +18,9 @@
         <com-d></com-d>
         <hr>
         <com-e></com-e>
+        <hr>
+        <com-f></com-f>
+        <p>子组件结束</p>
     </div>
 </template>
 
@@ -26,16 +30,17 @@
     import ComC from './components/comC'
     import ComD from './components/comD'
     import ComE from './components/comE'
+    import ComF from './components/comF'
     export default {
         name: 'app',
         components:{
             ComE,
-            ComB,
-            ComA,ComB,ComC,ComD
+            ComA,ComB,ComC,ComD,ComF
         },
         data() {
             return {}
-        }
+        },
+		
     }
 </script>
 

@@ -1,36 +1,33 @@
 <template>
-    <div>
-        ComC 演示action
-        <br>
-        <button @click="handle">按钮</button>
-        <br>
-        {{ count }}
-    </div>
+  <div>
+    ComD 演示action
+    <br />
+    <button @click="handle">按钮</button>
+    <br />
+    {{ count }}
+  </div>
 </template>
 
 <script>
-    import {mapState} from 'vuex'
-    import {mapMutations} from 'vuex'
-    import {mapActions} from 'vuex'
-    export default {
-        name: "comD",
-        methods:{
-            handle(){
-                //调用action
-                // this.$store.dispatch('setCount',10)
-                this.setCount(20);
-            },
+import { mapState } from "vuex";
+import { mapMutations } from "vuex";
+import { mapActions } from "vuex";
+export default {
+  name: "comD",
+  methods: {
+    handle() {
+      //调用action
+	  // let promise = this.$store.dispatch('setCount',10)
+      this.actionA(100);
+    },
 
-            ...mapActions(["setCount"])
-        },
-        computed:{
-            ...mapState(['count'])
-        }
-
-
-    }
+	...mapActions(["setCount", "actionA"]),
+  },
+  computed: {
+	...mapState(["count"]),
+  },
+};
 </script>
 
 <style scoped>
-
 </style>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let o = {
+        id: 1
+    }
+    let o1 = {
+        //将o对象作为o1对象的属性存在,其实就是引用传递
+        ...{o}
+    }
+    console.log(o1.o)
+
+    let o2 = JSON.parse(JSON.stringify(o));
+</script>
+</body>
+</html>
