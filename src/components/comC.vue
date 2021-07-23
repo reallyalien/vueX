@@ -9,21 +9,25 @@
 </template>
 
 <script>
-    import {mapState} from 'vuex'
-    import {mapMutations} from 'vuex'
+    import {
+        mapState
+    } from 'vuex'
+    import {
+        mapMutations
+    } from 'vuex'
 
     export default {
         name: "comC",
-        data(){
-            return{
+        data() {
+            return {
 
             }
         },
-        computed:{
-            ...mapState(['count','msg'])
+        computed: {
+            ...mapState(['count', 'msg'])
         },
-        methods:{
-            handle(){
+        methods: {
+            handle() {
                 // this.$store.commit('setCount',5)
                 this.setCount(5);
             },
